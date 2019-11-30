@@ -12,8 +12,24 @@ namespace JoseChan\App\DataSet\Models;
 use Illuminate\Database\Eloquent\Model;
 use JoseChan\App\DataSet\Collection\AppCollection;
 
+/**
+ * 应用模型
+ * Class App
+ * @package JoseChan\App\DataSet\Models
+ * @property int $id
+ * @property string $name
+ * @property string $app_secret
+ * @property string $created_at
+ * @property string $updated_at
+ * @property int $status
+ */
 class App extends Model
 {
+    /**
+     * 设置采用的集合类
+     * @param array $models
+     * @return \Illuminate\Database\Eloquent\Collection|AppCollection
+     */
     public function newCollection(array $models = [])
     {
         return new AppCollection($models);
